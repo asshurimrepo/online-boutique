@@ -1,4 +1,4 @@
-Wall Of Frame Project
+Online Boutique
 ==============
 
 Using PHP Framework Laravel 4.2.
