@@ -1,3 +1,8 @@
+html, body {
+    width: auto !important;
+    overflow-x: hidden !important;
+}
+
 body {
     overflow-x: hidden;
    /* font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;*/
