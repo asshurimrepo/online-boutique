@@ -1,7 +1,7 @@
 <div class="col-md-10 col-md-offset-1">
     {{--Background Images--}}
-    <div style="background: #FCFCFC;" >
-        <img src="{{ $product->present()->image }}" width="100%" height="620"
+    <div style="background: #FCFCFC;  max-height: 500px;" >
+        <img src="{{ $product->present()->image }}" width="100%" height="500px"
              class="reel img-responsive elem-center"
              id="image"
              data-opening="1"
