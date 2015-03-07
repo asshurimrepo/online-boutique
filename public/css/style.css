@@ -767,7 +767,7 @@ body {
 #smart-header .dropdown-menu { min-width: 70px; }
 #smart-header .dropdown-menu li { border: none; padding-right: 0; }
 
-#image-reel > img{ margin-top: -26%; }
+.reel > img{ margin-top: -26%; }
 
 .frames .item { font-family: 'opensans-light'; color: #323233; cursor: pointer; margin-bottom: 20px}
 .frames .item > a{ background: #FCFCFC; display: block }
