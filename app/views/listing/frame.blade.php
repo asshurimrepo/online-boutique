@@ -1,6 +1,6 @@
 <div class="col-md-10 col-md-offset-1">
     {{--Background Images--}}
-    <div style="background: #FCFCFC;" >
+    <div style="background: #FCFCFC;" class="o-3d-spin" >
         <img src="{{ $product->present()->image }}" width="100%" height="600"
              class="reel img-responsive elem-center"
              data-opening="1"

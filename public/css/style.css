@@ -768,6 +768,7 @@ body {
 #smart-header .dropdown-menu li { border: none; padding-right: 0; }
 
 .reel > img{ margin-top: -26%; }
+.o-3d-spin > .reel{ height: auto !important; }
 
 .frames .item { font-family: 'opensans-light'; color: #323233; cursor: pointer; margin-bottom: 20px}
 .frames .item > a{ background: #FCFCFC; display: block }
