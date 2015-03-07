@@ -1,6 +1,6 @@
  @if( $products->count() > 0 )
     @foreach($products as $i => $product)
-        <div class="col-md-4 col-sm-6 col-xs-6  item ">
+        <div class="col-md-4 col-sm-6 item ">
             @include('listing.product')
         </div>
     @endforeach
