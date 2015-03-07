@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-6">
-                    <h2 class="title">Wall of Frames</h2>
+                    <h2 class="title">Ukay Outfits</h2>
                     <p class="desc">
                         Ukay is an Online Boutique is the Philippines Home of middle class brands for your Fashion Designs and Grooming.
                     </p>
