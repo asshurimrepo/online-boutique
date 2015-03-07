@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'previboo_wallofframe',
-			'username'  => 'previboo_juni',
-			'password'  => '!Is;hE3A#rba',
+			'database'  => 'previboo_asshurim_db1',
+			'username'  => 'previboo_assh',
+			'password'  => 'amazinggrace',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
