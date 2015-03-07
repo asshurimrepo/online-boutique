@@ -5,10 +5,17 @@ use Iboostme\Product\Wishlist\WishlistRepository;
 use Illuminate\Support\Facades\Form;
 
 class ProductPresenter extends Presenter{
-    public function url(){
+	/**
+	 * @return string
+	 */
+	public function url(){
         return route('post.single', [$this->entity->id, $this->entity->slug]);
     }
-    public function title(){
+
+	/**
+	 * @return string
+	 */
+	public function title(){
         if($this->entity->title){
             $title = preg_replace( "/^\.+|\.+$/", "", $this->entity->title );
             return Str::limit(ucwords($title), 40, '');
@@ -17,26 +24,57 @@ class ProductPresenter extends Presenter{
         return 'Untitled';
 
     }
-    public function category(){
+
+	/**
+	 * @return string
+	 */
+	public function category(){
         return ucfirst($this->entity->category->name);
     }
-    public function size(){
+
+	/**
+	 * @return string
+	 */
+	public function size(){
         return $this->entity->width . 'x' . $this->entity->height;
     }
-    public function price(){
+
+	/**
+	 * @return mixed
+	 */
+	public function price(){
         return $this->entity->price;
     }
-    public function priceMark(){
-        return "{{ main.currencyConvert(".$this->entity->price.", main.inCurrency, main.outCurrency ) | currency : main.outCurrency + ' ' }}";
-    }
-    public function totalAmount(){
+
+	/**
+	 * @return string
+	 */
+	public function priceMark(){
         return "{{ main.currencyConvert(".$this->entity->price.", main.inCurrency, main.outCurrency ) | currency : main.outCurrency + ' ' }}";
     }
 
-    public function totalPrice( $quantity ){
+	/**
+	 * @return string
+	 */
+	public function totalAmount(){
+        return "{{ main.currencyConvert(".$this->entity->price.", main.inCurrency, main.outCurrency ) | currency : main.outCurrency + ' ' }}";
+    }
+
+	/**
+	 * @param $quantity
+	 *
+	 * @return mixed
+	 */
+	public function totalPrice( $quantity ){
         return $quantity * $this->entity->price;
     }
-    public function excerpt($limit = 100){
+
+	/**
+	 * @param int $limit
+	 *
+	 * @return string
+	 */
+	public function excerpt($limit = 100){
         $excerpt = $this->entity->content;
         if($this->entity->excerpt){
             $excerpt = $this->entity->excerpt;
@@ -44,17 +82,33 @@ class ProductPresenter extends Presenter{
 
         return Str::limit($excerpt, $limit, '');
     }
-    public function content(){
+
+	/**
+	 * @return mixed
+	 */
+	public function content(){
         $content = $this->entity->content;
         return $content;
     }
-    public function type(){
-        return ucfirst($this->entity->type->name) . ' Frame';
+
+	/**
+	 * @return string
+	 */
+	public function type(){
+        return ucfirst($this->entity->type->name);
     }
-    public function status(){
+
+	/**
+	 * @return mixed
+	 */
+	public function status(){
         return $this->entity->status->name;
     }
-    public function statusClass(){
+
+	/**
+	 * @return string
+	 */
+	public function statusClass(){
         $class = '';
         switch($this->entity->status->slug){
             case 'new':
@@ -66,7 +120,11 @@ class ProductPresenter extends Presenter{
         }
         return $class;
     }
-    public function wishlistLabel(){
+
+	/**
+	 * @return string
+	 */
+	public function wishlistLabel(){
         $repo = new WishlistRepository();
         $output = '';
         if($repo->isExists($this->entity)) {
@@ -78,32 +136,58 @@ class ProductPresenter extends Presenter{
         }
         return $output;
     }
-    public function wishlistDate(){
+
+	/**
+	 * @return bool|string
+	 */
+	public function wishlistDate(){
         return date('m-d-Y', strtotime($this->entity->wishlist->created_at));
     }
-    public function image( $type = '' ){
-        if($type)
-            $type = $this->entity->image_type;
 
-        if( !$this->entity->image )
-            return asset('img/frame1.jpg');
-
-        if($type){
-            return asset('uploads/products/designs/'.$type.'/' . $this->entity->image);
-        }
-
-        return asset('uploads/products/designs/thumbs/' . $this->entity->image);
+	/**
+	 * @param string $type
+	 *
+	 * @return string
+	 */
+	public function image( $type = '' ){
+        return asset("uploads/products/thumbs/{$this->entity->image}" );
     }
-    public function imageWithType( $type ){
+
+	/**
+	 * @return string
+	 */
+	public function imgSequence()
+	{
+		return asset("uploads/products/{$this->entity->id}/##.png|1..18");
+	}
+
+	/**
+	 * @param $type
+	 *
+	 * @return string
+	 */
+	public function imageWithType( $type ){
         return asset('uploads/products/designs/'.$type.'/' . $this->entity->image);
     }
-    public function imagePreview(){
+
+	/**
+	 * @return string
+	 */
+	public function imagePreview(){
         return asset('uploads/products/designs/preview/' . $this->entity->image);
     }
-    public function imageType(){
+
+	/**
+	 * @return mixed
+	 */
+	public function imageType(){
         return $this->entity->image_type;
     }
-    public function imageOriginalType(){
+
+	/**
+	 * @return mixed
+	 */
+	public function imageOriginalType(){
         return $this->entity->image_original_type;
     }
 }

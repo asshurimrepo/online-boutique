@@ -4,7 +4,7 @@
                 <div class="col-md-6 col-sm-6">
                     <h2 class="title">Wall of Frames</h2>
                     <p class="desc">
-                        Wallframe is the Middle East’s Home of luxury brands for your Home Designs and Framing.
+                        Ukay is an Online Boutique is the Philippines Home of middle class brands for your Fashion Designs and Grooming.
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-6">
@@ -30,7 +30,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; WallOfFrames 2014</span>
+                    <span class="copyright">Copyright &copy; Ukay 2014</span>
                 </div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4 ">

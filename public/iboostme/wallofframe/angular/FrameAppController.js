@@ -47,8 +47,6 @@ app.controller("FrameAppController", function($http, $scope, productService){
     $scope.showLoader = false;
     $scope.types = window.types;
     $scope.frameParts = window.parts;
-    
-
 
     var preview = $('#product_design');
     var frame = $('#product_frame');
@@ -158,11 +156,11 @@ app.controller("FrameAppController", function($http, $scope, productService){
     }
 
     $scope.changeFrameImage = function( image ){
-        $(preview).attr('width',  $scope.types[$scope.type].previewWidth );
-        $(frame).attr('src', image);
+        //$(preview).attr('width',  $scope.types[$scope.type].previewWidth );
+        //$(frame).attr('src', image);
     };
     $scope.setWidthByIndex = function( index ){
-        $(frame).attr('width', $scope.types[$scope.type].widths[index] );
+        //$(frame).attr('width', $scope.types[$scope.type].widths[index] );
     }
 
     $scope.changeBgImage = function( image ){

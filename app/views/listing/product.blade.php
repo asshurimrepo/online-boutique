@@ -11,7 +11,7 @@
 
     <div class="detail">
         <div style="min-height: 45px">
-            <h4 class="title">{{ $product->present()->title }} <span>{{ $product->present()->size }}</span></h4>
+            <h4 class="title">{{ $product->present()->title }}</h4>
             <div class="subhead">{{ $product->present()->category }}</div>
         </div>
         <div class="description" ><a href="#"><i class="fa fa-tag"></i> {{$product->present()->priceMark}}</a></div>

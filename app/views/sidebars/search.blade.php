@@ -38,7 +38,7 @@
 </div>
 
 <div class="filter-item border-bottom">
-    <div class="filter-heading clearfix"><h4>Frame Types</h4> {{--<button class="btn">Reset</button>--}}</div>
+    <div class="filter-heading clearfix"><h4>Ukay Types</h4> {{--<button class="btn">Reset</button>--}}</div>
     <div class="check-group">
         @if( ProductType::get()->count() > 0 )
             @foreach( ProductType::get() as $type )

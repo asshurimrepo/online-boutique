@@ -48,4 +48,12 @@ class Product extends \Eloquent {
 	public function wishlist(){
 		return $this->hasOne('Wishlist', 'product_id', 'id');
 	}
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+	 */
+	public function images()
+	{
+		return $this->morphMany( 'Image', 'imageable' );
+	}
 }

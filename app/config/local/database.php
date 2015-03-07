@@ -23,7 +23,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'db_wallofframe',
+			'database'  => 'db_onlineboutique',
 			'username'  => 'homestead',
 			'password'  => 'secret',
 			'charset'   => 'utf8',

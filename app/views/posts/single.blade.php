@@ -11,7 +11,8 @@
     {{ link_js('assets/elevatezoom/jquery.elevateZoom-3.0.8.min.js') }}
     {{ link_js('iboostme/wallofframe/elevate.js') }}
     {{ link_js('iboostme/wallofframe/frame.js') }}
-    
+    {{ link_js('assets/reel/jquery.reel.js') }}
+
 @stop
 @section('content')
     <section>

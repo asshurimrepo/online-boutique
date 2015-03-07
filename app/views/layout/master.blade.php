@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ isset($pageTitle) ? $pageTitle . ' |' : '' }}  Wall of Frame</title>
+    <title>{{ isset($pageTitle) ? $pageTitle . ' |' : '' }}  Ukay Outfits</title>
 
     <!-- Bootstrap Core CSS -->
     {{ link_css('css/bootstrap.min.css') }}

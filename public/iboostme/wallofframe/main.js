@@ -9,6 +9,13 @@ $(function() {
         event.preventDefault();
     });
 
+
+    $(".spotlight-slider").owlCarousel({
+        autoPlay: 3000,
+        singleItem:true
+    });
+
+
     $("#owl-related").owlCarousel({
         autoPlay: 3000, //Set AutoPlay to 3 seconds
 
