@@ -28,6 +28,7 @@ Route::group( ['prefix' => 'api/product', 'namespace' => 'Api'], function () {
     Route::get('brand/{slug}', ['as' => 'product.api.brand', 'uses' => 'ProductAPIController@getByBrand' ]);
 
     // for admin only
+    Route::get('product-status', ['as' => 'product.api.status', 'uses' => 'ProductAPIController@getByStatus' ]);
     Route::get('status', ['before' => 'auth.admin.only', 'as' => 'product.api.status', 'uses' => 'ProductAPIController@getByStatus' ]);
     Route::get('frame-navigation', ['before' => 'auth.admin.only', 'as' => 'product.api.nav', 'uses' => 'ProductAPIController@getFrameNavigation' ]);
 
