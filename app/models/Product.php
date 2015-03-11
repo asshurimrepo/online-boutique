@@ -25,6 +25,7 @@ class Product extends \Eloquent {
 		'image',
 		'image_type'
 	];
+	protected $appends = ['imgSequence'];
 
 	public function newQuery($excludeDeleted = true)
 	{
@@ -55,5 +56,10 @@ class Product extends \Eloquent {
 	public function images()
 	{
 		return $this->morphMany( 'Image', 'imageable' );
+	}
+
+	public function imgSequence()
+	{
+		return $this->present()->imgSequence;
 	}
 }
