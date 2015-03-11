@@ -59,7 +59,8 @@ class ProductFormatter {
             'imageSquare' => $product->present()->imageWithType('square'),
             'imageHorizontal' => $product->present()->imageWithType('horizontal'),
             'imageVertical' => $product->present()->imageWithType('vertical'),
-            'imagePreview' => $product->present()->imageWithType('preview')
+            'imagePreview' => $product->present()->imageWithType('preview'),
+	        'imgSequence' => $product->imgSequence()
         ];
 
         return $result;
