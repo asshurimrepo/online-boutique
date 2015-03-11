@@ -27,6 +27,8 @@ Route::group( ['prefix' => 'api/product', 'namespace' => 'Api'], function () {
     Route::get('type/{slug}', ['as' => 'product.api.type', 'uses' => 'ProductAPIController@getByType' ]);
     Route::get('brand/{slug}', ['as' => 'product.api.brand', 'uses' => 'ProductAPIController@getByBrand' ]);
 
+	Route::controller('/search', 'SearchAPIController');
+
     // for admin only
     Route::get('product-status', ['as' => 'product.api.status', 'uses' => 'ProductAPIController@getByStatus' ]);
     Route::get('status', ['before' => 'auth.admin.only', 'as' => 'product.api.status', 'uses' => 'ProductAPIController@getByStatus' ]);
