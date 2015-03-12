@@ -48,4 +48,8 @@
 			return $this->model->whereBetween('vs_shoulder', [$value-1, $value+1]);
 		}
 
+		private function keywords($value){
+			return $this->model->where('title', 'like', "%{$value}%");
+		}
+
 	}
