@@ -49,24 +49,15 @@
 			return $this->model->where( 'title', 'like', "%{$value}%" );
 		}
 
-		/**
-		 * @param $value
-		 *
-		 * @return $this
-		 */
-		private function breast( $value )
-		{
-			return $this->model->whereBetween( 'vs_breast', [ $value - 1, $value + 1 ] );
-		}
 
 		/**
 		 * @param $value
 		 *
 		 * @return $this
 		 */
-		private function shoulder( $value )
+		private function bust( $value )
 		{
-			return $this->model->whereBetween( 'vs_shoulder', [ $value - 1, $value + 1 ] );
+			return $this->model->whereBetween( 'vs_bust', [ $value - 1, $value + 1 ] );
 		}
 
 		/**
