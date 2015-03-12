@@ -1,4 +1,5 @@
 <?php
+	namespace Iboostme\Search;
 
 	class SearchProduct {
 
