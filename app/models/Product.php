@@ -58,7 +58,7 @@ class Product extends \Eloquent {
 		return $this->morphMany( 'Image', 'imageable' );
 	}
 
-	public function imgSequence()
+	public function getImgSequenceAttribute()
 	{
 		return $this->present()->imgSequence;
 	}
