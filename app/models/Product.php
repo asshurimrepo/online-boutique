@@ -25,7 +25,7 @@ class Product extends \Eloquent {
 		'image',
 		'image_type'
 	];
-	protected $appends = ['imgSequence'];
+	protected $appends = ['imgSequence', 'imageThumb'];
 
 	public function newQuery($excludeDeleted = true)
 	{
@@ -61,5 +61,10 @@ class Product extends \Eloquent {
 	public function getImgSequenceAttribute()
 	{
 		return $this->present()->imgSequence;
+	}
+
+	public function getImageThumbAttribute()
+	{
+		return $this->present()->image;
 	}
 }
