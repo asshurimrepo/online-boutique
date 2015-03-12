@@ -12,7 +12,7 @@
 
 		public function __construct()
 		{
-			$this->model = new Product;
+			$this->model  = new Product;
 			$this->inputs = \Input::all();
 			$this->beginSearch();
 		}
@@ -39,17 +39,29 @@
 			}
 		}
 
-		/**
-		 * @param $value
-		 *
-		 * @return $this
-		 */
-		private function breast($value){
-			return $this->model->whereBetween('vs_shoulder', [$value-1, $value+1]);
+		private function keywords( $value )
+		{
+			return $this->model->where( 'title', 'like', "%{$value}%" );
 		}
 
-		private function keywords($value){
-			return $this->model->where('title', 'like', "%{$value}%");
+		private function breast( $value )
+		{
+			return $this->model->whereBetween( 'vs_breast', [ $value - 1, $value + 1 ] );
+		}
+
+		private function shoulder( $value )
+		{
+			return $this->model->whereBetween( 'vs_shoulder', [ $value - 1, $value + 1 ] );
+		}
+
+		private function waist( $value )
+		{
+			return $this->model->whereBetween( 'vs_waist', [ $value - 1, $value + 1 ] );
+		}
+
+		private function hips( $value )
+		{
+			return $this->model->whereBetween( 'vs_hips', [ $value - 1, $value + 1 ] );
 		}
 
 	}
