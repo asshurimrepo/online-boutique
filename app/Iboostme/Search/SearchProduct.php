@@ -39,26 +39,51 @@
 			}
 		}
 
+		/**
+		 * @param $value
+		 *
+		 * @return $this
+		 */
 		private function keywords( $value )
 		{
 			return $this->model->where( 'title', 'like', "%{$value}%" );
 		}
 
+		/**
+		 * @param $value
+		 *
+		 * @return $this
+		 */
 		private function breast( $value )
 		{
 			return $this->model->whereBetween( 'vs_breast', [ $value - 1, $value + 1 ] );
 		}
 
+		/**
+		 * @param $value
+		 *
+		 * @return $this
+		 */
 		private function shoulder( $value )
 		{
 			return $this->model->whereBetween( 'vs_shoulder', [ $value - 1, $value + 1 ] );
 		}
 
+		/**
+		 * @param $value
+		 *
+		 * @return $this
+		 */
 		private function waist( $value )
 		{
 			return $this->model->whereBetween( 'vs_waist', [ $value - 1, $value + 1 ] );
 		}
 
+		/**
+		 * @param $value
+		 *
+		 * @return $this
+		 */
 		private function hips( $value )
 		{
 			return $this->model->whereBetween( 'vs_hips', [ $value - 1, $value + 1 ] );
