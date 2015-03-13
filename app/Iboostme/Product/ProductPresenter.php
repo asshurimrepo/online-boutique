@@ -158,7 +158,18 @@ class ProductPresenter extends Presenter{
 	 */
 	public function imgSequence()
 	{
-		return asset("uploads/products/{$this->entity->id}/##.png|1..18");
+		$files = \File::files("uploads/products/{$this->entity->id}");
+
+		$a = reset($files);
+		$b = end($files);
+
+		$a = explode('/', $a);
+		$b = explode('/', $b);
+
+		$a = str_replace(array('.jpg', '.png'), "", $a[3]);
+		$b = str_replace(array('.jpg', '.png'), "", $b[3]);
+
+		return asset("uploads/products/{$this->entity->id}/##.png|{$a}..{$b}");
 	}
 
 	/**
