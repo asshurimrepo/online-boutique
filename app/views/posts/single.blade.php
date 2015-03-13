@@ -32,7 +32,7 @@
                         <div class="price"><a href="#"><i class="fa fa-tag"></i> {{ $product->present()->priceMark }}</a></div>
                     </div>
                     <div class="description">
-                        {{ Str::limit($product->present()->content, 280  ) }}
+                        {{ nl2br($product->present()->content) }}
                     </div>
                     <a href="{{ route('bag.add', $product->id) }}" class="btn btn-default btn-lg btn-block btn-purchase"> Add to Bag</a>
                     {{ Form::open(['route' => 'customer.wishlist.add', 'method' => 'get']) }}
