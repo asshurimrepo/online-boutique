@@ -1,3 +1,5 @@
+
+
 app.controller("DragNDropController", function($http, $scope, productService){
     $scope.showLoader = false;
     $scope.categories = window.categories;
@@ -41,6 +43,14 @@ app.controller("DragNDropController", function($http, $scope, productService){
 });
 
 
+app.controller("singleProductController", function($scope, productService, $timeout){
+    $scope.products = [];
+    productService.getNewProducts($scope);
+    $timeout(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+
+    }, 1000);
+});
 
 
 app.controller("FrameAppController", function($http, $scope, productService){

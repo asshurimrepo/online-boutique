@@ -5,6 +5,16 @@ app.service('productService', function( $http ){
     var backgroundList = [];
     var asd = [];
 
+    var apis = {
+        newProducts: "http://preview.iboostme.com/miruhssa/ukay/public/api/product/new-arrivals"
+    };
+
+    this.getNewProducts = function($scope){
+
+        $http.get(apis.newProducts).success(function(data){
+            $scope.products = data.products;
+        });
+    };
 
     // get frame list
     this.getFrameList = function(){
