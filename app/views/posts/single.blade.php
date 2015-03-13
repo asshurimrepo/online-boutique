@@ -37,18 +37,18 @@
 
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <span class="badge">{{ $product->vs_bust }}</span>
-                            Bust (inch)
+                            <span class="badge">{{ $product->vs_bust }} (inch)</span>
+                            Bust
                         </li>
 
                         <li class="list-group-item">
-                            <span class="badge">{{ $product->vs_waist }}</span>
-                            Waist (inch)
+                            <span class="badge">{{ $product->vs_waist }} (inch)</span>
+                            Waist
                         </li>
 
                         <li class="list-group-item">
-                            <span class="badge">{{ $product->vs_hips }}</span>
-                            Hips (inch)
+                            <span class="badge">{{ $product->vs_hips }} (inch)</span>
+                            Hips
                         </li>
                     </ul>
 
