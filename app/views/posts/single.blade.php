@@ -34,6 +34,24 @@
                     <div class="description">
                         {{ nl2br($product->present()->content) }}
                     </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="badge">{{ $product->vs_bust }}</span>
+                            Bust (inch)
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="badge">{{ $product->vs_waist }}</span>
+                            Waist (inch)
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="badge">{{ $product->vs_hips }}</span>
+                            Hips (inch)
+                        </li>
+                    </ul>
+
                     <a href="{{ route('bag.add', $product->id) }}" class="btn btn-default btn-lg btn-block btn-purchase"> Add to Bag</a>
                     {{ Form::open(['route' => 'customer.wishlist.add', 'method' => 'get']) }}
                         {{ Form::hidden('product', $product->id) }}
