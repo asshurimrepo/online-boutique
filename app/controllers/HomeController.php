@@ -15,6 +15,9 @@ class HomeController extends BaseController {
 		$this->data['products'] = $this->productRepo->getByRandom( 4 )->get();
 		$this->data['product'] = Product::first(); // frame of the week
 		$this->data['url_collection'] = route('browse.type', ['collections']);
+
+//		return File::files('uploads/products/1');
+
 		return View::make('index', $this->data);
 	}
 
