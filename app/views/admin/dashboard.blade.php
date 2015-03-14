@@ -43,7 +43,14 @@
 
                         <h3 class="form-block-title">Products</h3>
 
-                        <div class="col-md-4 column productbox" ng-repeat="p in data">
+                        <div class="shim-wrap">
+                            <div class="form-item form-item-text be-placeholder" id="website-container">
+                                <input type="text" ng-model="search" class="form-text form-text-normal"  placeholder="Filter Products">
+                            </div>
+                            <div class="shim"><i class="fa fa-search"></i></div>
+                        </div>
+
+                        <div class="col-md-4 column productbox" ng-repeat="p in data | filter:search">
                             <img style="height: 265px;" ng-src="@{{ p.imageThumb }}" class="img-responsive">
                             <div class="producttitle">@{{ p.title }}</div>
                             <div class="productprice">
@@ -55,7 +62,7 @@
                             </div>
                         </div>
 
-                        <div class="js-custom-section soc-custom-section">
+                        <div class="js-custom-section soc-custom-section" style="margin-top: 20px;">
                             <button class="btn-block add-custom-section add-custom-section-block form-block">
                                 <i class="fa fa-plus"></i> Add New Product
                             </button>
