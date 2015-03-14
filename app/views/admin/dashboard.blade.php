@@ -46,7 +46,7 @@
                         <h3 class="form-block-title">Products</h3>
 
                         <div class="col-md-4 column productbox" ng-repeat="p in data">
-                            <img ng-src="@{{ p.imageThumb }}" class="img-responsive">
+                            <img style="height: 265px;" ng-src="@{{ p.imageThumb }}" class="img-responsive">
                             <div class="producttitle">@{{ p.title }}</div>
                             <div class="productprice">
                                 <div class="pull-right">
