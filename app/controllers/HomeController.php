@@ -11,8 +11,8 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		$this->data['mustHaves'] = $this->productRepo->getByRandom( 4 )->get();
-		$this->data['products'] = $this->productRepo->getByRandom( 4 )->get();
+		$this->data['mustHaves'] = $this->productRepo->getByRandom( 6 )->get();
+		$this->data['products'] = $this->productRepo->getByRandom( 20 )->get();
 		$this->data['product'] = Product::first(); // frame of the week
 		$this->data['url_collection'] = route('browse.type', ['collections']);
 
