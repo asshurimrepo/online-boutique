@@ -33,6 +33,11 @@
                         <div class="col-md-3 col-sm-6 item ">
                             @include('listing.product')
                         </div>
+
+                        @if($i%3 == 1)
+                            <div class="col-md-12"></div>
+                        @endif
+
                     @endforeach
                 @else
                     <div class="alert alert-danger alert-sm" role="alert">
