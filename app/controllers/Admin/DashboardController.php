@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Validate;
 
 class DashboardController extends \BaseController {
     public function index(){
+
         $this->data['user'] = Auth::user();
         return View::make('admin.dashboard', $this->data);
+
+
     }
 }
