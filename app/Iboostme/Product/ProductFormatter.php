@@ -60,7 +60,10 @@ class ProductFormatter {
             'imageHorizontal' => $product->present()->imageWithType('horizontal'),
             'imageVertical' => $product->present()->imageWithType('vertical'),
             'imagePreview' => $product->present()->imageWithType('preview'),
-	        'imgSequence' => $product->present()->imgSequence
+	        'imgSequence' => $product->present()->imgSequence,
+	        'vs_bust' => $product->vs_bust,
+	        'vs_waist' => $product->vs_waist,
+	        'vs_hips' => $product->vs_hips,
         ];
 
         return $result;
