@@ -39,9 +39,7 @@
 
                     </div>
 
-                    <div class="form-block" ng-controller="ProductsCtrl"><span id="products"
-                                                                               class="anchor js-named-anchor"
-                                                                               style="top: -133px; padding-top: 133px;"></span>
+                    <div class="form-block" ng-controller="ProductsCtrl" id="products">
 
                         <h3 class="form-block-title">Products</h3>
 

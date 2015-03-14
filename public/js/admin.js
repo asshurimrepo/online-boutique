@@ -1,3 +1,9 @@
+$(function(){
+    $(".js-section-nav").click(function(){
+        $(this).addClass('active').parent().siblings().find('a').removeClass('active');
+    });
+});
+
 var app = angular.module('ukay', []);
 
 
