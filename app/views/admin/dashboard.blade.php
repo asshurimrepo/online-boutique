@@ -39,15 +39,27 @@
 
                     </div>
 
-                    <div class="form-block" ng-controller="ProductsCtrl" id="products">
+                    <div class="form-block" ng-controller="ProductsCtrl" >
+                        <span id="products" class="anchor js-named-anchor"
+                        style="top: -101px; padding-top: 133px;"></span>
 
                         <h3 class="form-block-title">Products</h3>
+
+                        <div class="js-custom-section soc-custom-section">
+                            <button class="btn-block add-custom-section add-custom-section-block form-block">
+                                <i class="fa fa-plus"></i> Add New Product
+                            </button>
+                        </div>
 
                         <div class="shim-wrap">
                             <div class="form-item form-item-text be-placeholder" id="website-container">
                                 <input type="text" ng-model="search" class="form-text form-text-normal"  placeholder="Filter Products">
                             </div>
                             <div class="shim"><i class="fa fa-search"></i></div>
+                        </div>
+
+                        <div class="text-center" ng-show="data.length < 1">
+                            <h1><i class="fa fa-spinner fa-spin"></i></h1>
                         </div>
 
                         <div class="col-md-4 column productbox" ng-repeat="p in data | filter:search">
@@ -62,11 +74,7 @@
                             </div>
                         </div>
 
-                        <div class="js-custom-section soc-custom-section" style="margin-top: 20px;">
-                            <button class="btn-block add-custom-section add-custom-section-block form-block">
-                                <i class="fa fa-plus"></i> Add New Product
-                            </button>
-                        </div>
+
 
                     </div>
 

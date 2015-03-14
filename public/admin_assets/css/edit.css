@@ -1,3 +1,7 @@
+html, body {
+    width: auto !important;
+    overflow-x: hidden !important; }
+
 @media (max-width: 603px) {
     .hide-phone {
         display: none !important;
