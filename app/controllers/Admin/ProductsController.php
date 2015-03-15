@@ -17,11 +17,19 @@ class ProductsController extends \BaseController {
 		$input['image']     = $filename;
 		$input['type_id']   = 1;
 		$input['status_id'] = 4;
+		$input['sizes']     = json_encode( $input['sizes'] );
 
 		\Product::create( $input );
 
-		return Redirect::back()->with('success', 'Successfully Saved!');
+		return Redirect::back()->with( 'success', 'Successfully Saved!' );
 
+	}
+
+	public function update( \Product $project )
+	{
+		$project->update( Input::all() );
+
+		return Redirect::back()->with( 'success', 'Successfully Updated!' );
 	}
 
 }

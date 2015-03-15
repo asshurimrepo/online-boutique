@@ -41,12 +41,19 @@ app.controller('OverviewCtrl', function ($scope, overview, $interval) {
 
         }, 400);
 
+        $scope.editProduct = function (product){
+            console.log(product);
+            $scope.isEditing = true;
+            $scope.edit = product;
+        };
+
         $scope.addNew = function(){
             $scope.isAdding = true;
         };
 
         $scope.cancel = function(){
           $scope.isAdding = false;
+          $scope.isEditing = false;
         };
     })
 

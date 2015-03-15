@@ -29,6 +29,18 @@ Route::group( [ 'before' => ['auth', 'auth.admin.only'], 'prefix' => 'admin', 'n
 	]);
 
 	/*
+	 * @route product/update
+	 * @name product.update
+	 * @uses ProductsController@update
+	 * */
+	Route::post('product/update/{product}', [
+	    'as'   => 'product.update',
+	    'uses' => 'ProductsController@update'
+	]);
+
+	Route::model('product', 'Product');
+
+	/*
 	 * @route api-provider
 	 * @name api.provider
 	 * @uses ApiProviderController@lists

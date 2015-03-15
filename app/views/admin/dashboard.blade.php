@@ -12,6 +12,11 @@
             </ul>
 
             <div class="form-contents">
+
+                @if(Session::has('success'))
+                    <div class="alert alert-success"><i class="fa fa-check"></i> <b>{{ Session::get('success') }}</b></div>
+                @endif
+
                 <div class="js-form-contents" ng-controller="OverviewCtrl">
                     <div class="form-block" id="basic_information-wrap">
                         <span id="dashboard" class="anchor js-named-anchor"
@@ -45,14 +50,14 @@
 
                         <h3 class="form-block-title">Products</h3>
 
-                        <div class="js-custom-section soc-custom-section" ng-hide="isAdding">
+                        <div class="js-custom-section soc-custom-section" ng-hide="isAdding || isEditing">
                             <button ng-click="addNew()"
                                     class="btn-block add-custom-section add-custom-section-block form-block">
                                 <i class="fa fa-plus"></i> Add New Product
                             </button>
                         </div>
 
-                        <div class="js-custom-section soc-custom-section" ng-show="isAdding">
+                        <div class="js-custom-section soc-custom-section" ng-show="isAdding || isEditing">
                             <button ng-click="cancel()"
                                     class="btn-block text-danger add-custom-section add-custom-section-block form-block">
                                 <i class="fa fa-times"></i> Cancel
@@ -64,7 +69,11 @@
                             @include('admin.add_product_form')
                         </div>
 
-                        <div class="shim-wrap" ng-hide="isAdding">
+                        <div ng-show="isEditing">
+                            @include('admin.edit_product_form')
+                        </div>
+
+                        <div class="shim-wrap" ng-hide="isAdding || isEditing">
                             <div class="form-item form-item-text be-placeholder" id="website-container">
                                 <input type="text" ng-model="search" class="form-text form-text-normal"
                                        placeholder="Filter Products">
@@ -76,14 +85,14 @@
                             <h1><i class="fa fa-spinner fa-spin"></i></h1>
                         </div>
 
-                        <div class="row product-wrap" ng-hide="isAdding">
+                        <div class="row product-wrap" ng-hide="isAdding || isEditing">
                             <div class="col-md-4 column productbox" ng-repeat="p in data | filter:search">
                                 <img style="height: 265px;" ng-src="@{{ p.imageThumb }}" class="img-responsive">
 
                                 <div class="producttitle">@{{ p.title }}</div>
                                 <div class="productprice">
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-link btn-xs" role="button">edit</i></a>
+                                        <a href="#" ng-click="editProduct(p)" class="btn btn-link btn-xs" role="button">edit</i></a>
                                         <a href="#" class="btn btn-danger btn-xs" role="button">X</a>
                                     </div>
                                     <div class="pricetext">@{{ p.price  }}</div>
