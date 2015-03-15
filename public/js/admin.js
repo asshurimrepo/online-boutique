@@ -1,5 +1,5 @@
-$(function(){
-    $(".js-section-nav").click(function(){
+$(function () {
+    $(".js-section-nav").click(function () {
         $(this).addClass('active').parent().siblings().find('a').removeClass('active');
     });
 });
@@ -26,22 +26,29 @@ app.controller('OverviewCtrl', function ($scope, overview, $interval) {
 })
 
 
-/*------------------------------ Products ------------------------------*/
+    /*------------------------------ Products ------------------------------*/
 
-.controller('ProductsCtrl', function ($scope, products, $interval) {
+    .controller('ProductsCtrl', function ($scope, products, $interval) {
 
-    var init = $interval(function () {
+        var init = $interval(function () {
 
-        console.log('init pr');
+            console.log('init pr');
 
-        if (products.data) {
-            $scope.data = products.data;
-            $interval.cancel(init);
-        }
+            if (products.data) {
+                $scope.data = products.data;
+                $interval.cancel(init);
+            }
 
-    }, 400);
+        }, 400);
 
-})
+        $scope.addNew = function(){
+            $scope.isAdding = true;
+        };
+
+        $scope.cancel = function(){
+          $scope.isAdding = false;
+        };
+    })
 
 
 ;
