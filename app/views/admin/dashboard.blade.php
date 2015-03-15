@@ -59,6 +59,11 @@
                             </button>
                         </div>
 
+
+                        <div ng-show="isAdding">
+                            @include('admin.add_product_form')
+                        </div>
+
                         <div class="shim-wrap" ng-hide="isAdding">
                             <div class="form-item form-item-text be-placeholder" id="website-container">
                                 <input type="text" ng-model="search" class="form-text form-text-normal"

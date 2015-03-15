@@ -183,6 +183,10 @@ h6 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 12px;
     position: relative;
+    height: 34px;
+    color: #000;
+    display: block;
+    width: 100%;
 }
 
 .form-option, option {

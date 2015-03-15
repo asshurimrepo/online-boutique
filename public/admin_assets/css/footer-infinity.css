@@ -1383,7 +1383,7 @@ a, .fake-link {
 }
 
 select {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 .form-text-normal, .form-text-xlarge {

@@ -166,6 +166,13 @@ class ProductPresenter extends Presenter{
 		$a = explode('/', $a);
 		$b = explode('/', $b);
 
+		if(! isset($a[3])){
+
+			return null;
+
+		}
+
+
 		$a = str_replace(array('.jpg', '.png'), "", $a[3]);
 		$b = str_replace(array('.jpg', '.png'), "", $b[3]);
 
