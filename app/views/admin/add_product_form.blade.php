@@ -1,4 +1,4 @@
-{{ Form::open([]) }}
+{{ Form::open(['files'=>true, 'route'=>'product.save']) }}
 
 <div class="form-item form-item-text be-placeholder">
     <label for="occupation">Title</label>
@@ -32,16 +32,14 @@
 
 </div>
 
-<div class="form-group">
-    <div class="form-item form-item-text be-placeholder">
-        <label>Available Sizes</label>
-        {{ Form::select('sizes', ['XS' => 'Xtra Small', 'S' => 'Small', 'M' => 'Medium', 'L' => 'Large', 'XL' => 'Xtra Large'], null, ['class' => 'form-select form-control form-select-normal','multiple', 'style' => 'padding:2px',]) }}
-    </div>
+<div class="form-item form-item-select">
+    <label for="occupation">Description</label>
+    {{ Form::textarea('description', null, ['class'=>'form-text form-text-normal', 'style' => 'height: 100px; padding: 5px;',])  }}
 </div>
 
 <div class="form-group">
     <div class="form-item form-item-text be-placeholder">
-        <label>Description</label>
+        <label>Available Sizes</label>
         {{ Form::select('sizes', ['XS' => 'Xtra Small', 'S' => 'Small', 'M' => 'Medium', 'L' => 'Large', 'XL' => 'Xtra Large'], null, ['class' => 'form-select form-control form-select-normal','multiple', 'style' => 'padding:2px',]) }}
     </div>
 </div>
@@ -55,7 +53,7 @@
 
 <div class="form-group">
     <div class="form-item form-item-text be-placeholder">
-       <button class="btn btn-block btn-primary">Publish</button>
+       <button class="btn btn-block btn-primary btn-lg">Publish</button>
     </div>
 </div>
 

@@ -18,6 +18,15 @@ Route::group( [ 'before' => ['auth', 'auth.admin.only'], 'prefix' => 'admin', 'n
 
     Route::get('account', ['as' => 'admin.dashboard.index', 'uses' => 'DashboardController@index' ]);
 
+	/*
+	 * @route product/save
+	 * @name product.save
+	 * @uses ProductsController@store
+	 * */
+	Route::post('product/save', [
+	    'as'   => 'product.save',
+	    'uses' => 'ProductsController@store'
+	]);
 
 	/*
 	 * @route api-provider
