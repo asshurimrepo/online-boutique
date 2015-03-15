@@ -23,7 +23,8 @@ class Product extends \Eloquent {
 		'is_available',
 		'views',
 		'image',
-		'image_type'
+		'image_type',
+		'sizes'
 	];
 	protected $appends = ['imgSequence', 'imageThumb'];
 
