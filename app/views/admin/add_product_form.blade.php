@@ -10,6 +10,11 @@
     {{ Form::select('category_id', ProductCategory::lists('name', 'id'), null, ['class' => 'form-select form-select-normal',]) }}
 </div>
 
+<div class="form-item form-item-text be-placeholder">
+    <label>Price</label>
+    <input name="price" type="number" class="form-text form-text-normal" placeholder="Enter Price" required="">
+</div>
+
 <div class="row">
     <div class="col-md-4">
         <div class="form-item form-item-text be-placeholder">
