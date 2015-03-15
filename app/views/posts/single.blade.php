@@ -27,7 +27,7 @@
                     <div class="detail">
                         <div style="min-height: 43px">
                             <h4 class="title"><a href="{{ $product->present()->url }}">{{ $product->present()->title }} <span>{{ $product->present()->size }}</span></a></h4>
-                            <div class="subhead">{{ $product->present()->type }}</div>
+                            <div class="subhead">{{ $product->present()->category }}</div>
                         </div>
                         <div class="price"><a href="#"><i class="fa fa-tag"></i> {{ $product->present()->priceMark }}</a></div>
                     </div>

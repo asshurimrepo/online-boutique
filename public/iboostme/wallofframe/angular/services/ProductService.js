@@ -6,7 +6,7 @@ app.service('productService', function( $http ){
     var asd = [];
 
     var apis = {
-        newProducts: "http://preview.iboostme.com/miruhssa/ukay/public/api/product/new-arrivals"
+        newProducts: "http://preview.iboostme.com/miruhssa/ukay/public/api/product/new-arrivals?take=10"
     };
 
     this.getNewProducts = function($scope){
