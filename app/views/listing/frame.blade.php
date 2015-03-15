@@ -13,14 +13,18 @@
 
     <div class="col-md-10 ">
         {{--Background Images--}}
-        <div style="background: #FCFCFC;" class="o-3d-spin" >
-            <img src="{{ $product->present()->image }}" width="100%" height="600"
-                 class="reel img-responsive elem-center"
-                 data-opening="1"
-                 data-delay="5"
-                 data-speed=".2"
-                 data-images="{{ $product->present()->imgSequence }}" />
-        </div>
+        @if($product->present()->imgSequence)
+            <div style="background: #FCFCFC;" class="o-3d-spin" >
+                <img src="{{ $product->present()->image }}" width="100%" height="600"
+                     class="reel img-responsive elem-center"
+                     data-opening="1"
+                     data-delay="5"
+                     data-speed=".2"
+                     data-images="{{ $product->present()->imgSequence }}" />
+            </div>
+        @else
+            <img src="{{ $product->present()->image }}" width="100%" />
+        @endif
 
 
 
