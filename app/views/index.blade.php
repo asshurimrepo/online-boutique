@@ -35,7 +35,7 @@
                         </div>
 
                         @if($i%4 == 3)
-                            <div class="col-md-12"></div>
+                            <div class="col-md-12">{{ $i }}</div>
                         @endif
 
                     @endforeach
