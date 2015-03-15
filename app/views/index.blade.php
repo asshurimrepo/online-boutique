@@ -53,7 +53,6 @@
         </div>
     </section>
 
-
         <section class="border-top border-bottom" id="must-have">
             <div class="container">
                 <div class="row">

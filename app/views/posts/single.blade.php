@@ -35,6 +35,14 @@
                         {{ nl2br($product->present()->content) }}
                     </div>
 
+                    Available in:
+                    <span class="sizes">S</span>
+                    <span class="sizes">M</span>
+                    <span class="sizes">L</span>
+                    <span class="sizes">XS</span>
+
+                    <div class="space-sm"></div>
+
                     <ul class="list-group">
                         <li class="list-group-item">
                             <span class="badge">{{ $product->vs_bust }} inch</span>

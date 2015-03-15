@@ -753,6 +753,13 @@ body {
 
 }
 
+/*Sizes*/
+.sizes{
+    border: solid 1px #999999;
+    padding: 10px;
+    margin: 2px;
+}
+
 
 /*MY CUSTOM*/
 .logo img { margin: 20px 0;   margin-top: -35px; }
