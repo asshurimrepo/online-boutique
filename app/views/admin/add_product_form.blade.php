@@ -39,7 +39,7 @@
 
 <div class="form-item form-item-select">
     <label for="occupation">Description</label>
-    {{ Form::textarea('description', null, ['class'=>'form-text form-text-normal', 'style' => 'height: 100px; padding: 5px;',])  }}
+    {{ Form::textarea('content', null, ['class'=>'form-text form-text-normal', 'style' => 'height: 100px; padding: 5px;',])  }}
 </div>
 
 <div class="form-group">
