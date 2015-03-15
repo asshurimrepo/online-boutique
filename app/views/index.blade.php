@@ -34,7 +34,7 @@
                             @include('listing.product')
                         </div>
 
-                        @if($i%4 == 1)
+                        @if($i%3 == 1)
                             <div class="col-md-12"></div>
                         @endif
 
