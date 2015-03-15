@@ -17,6 +17,7 @@ class ProductsController extends \BaseController {
 		$input['image']     = $filename;
 		$input['type_id']   = 1;
 		$input['status_id'] = 4;
+		$input['is_available'] = 1;
 		$input['sizes']     = json_encode( $input['sizes'] );
 
 		\Product::create( $input );
